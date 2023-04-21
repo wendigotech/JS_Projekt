@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projekt 2</title>
+        <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="node_modules/glightbox/dist/css/glightbox.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      
+    </head>
+<body>
+    <header>
+        <nav class="menu">
+            <div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/ssstar.svg" alt="logo">
+                    </a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hamburger">
+            <input type="checkbox" id="ham" aria-label="checkbox">
+            <label for="ham">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <script>
+                // document.addEventListener('mousemove', function(e) {
+                //     document.querySelector('.hero').style.backgroundImage =  'url(https://source.unsplash.com/1600x900/?nature,water)' 
+                // });
+                // call mousemove event on every mousemove, every 500ms
+
+
+                document.querySelector('.hero').addEventListener('mousemove', function(e) {
+                    // get mouse position
+                    let x = e.clientX / window.innerWidth;
+                    let y = e.clientY / window.innerHeight;
+                    // change background-image
+                    setTimeout(function() {
+                        document.querySelector('.hero').style.backgroundImage =  'url(https://picsum.photos/200/300.webp?random=' + x + "&grayscale)"
+                    }, 500);
+
+                    setTimeout(function() {
+                        document.querySelector('.hero').style.backgroundImage =  'url(https://picsum.photos/200/300.webp?random=' + y + "&grayscale)"
+                    }, 500);
+                });
+
+            </script>
+            <div class="hero-text">
+                <h1>Projekt 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+            </div>
+            <div class="bkg-video">
+                <div id="scrolly-video"></div>
+            </div>
+        </section>
+        <section class="top">
+            <div class="gallery">
+                <a href="https://unsplash.it/2000.webp?random=1" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=1" alt="image"></a>
+                <a href="https://unsplash.it/2000.webp?random=2" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=2" alt="image"></a>
+                <a href="https://unsplash.it/2000.webp?random=3" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=3" alt="image"></a>
+                <a href="https://unsplash.it/2000.webp?random=4" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=4" alt="image"></a>
+                <a href="https://unsplash.it/2000.webp?random=5" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=5" alt="image"></a>
+                <a href="https://unsplash.it/2000.webp?random=6" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=6" alt="image"></a>
+                <a href="https://unsplash.it/2000.webp?random=7" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=7" alt="image"></a>
+                <a href="https://unsplash.it/2000.webp?random=8" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=8" alt="image"></a>
+                <a href="https://unsplash.it/2000.webp?random=9" alt="a forest after an apocalypse" class="glightbox" data-gallery="gallery1" ><img src="https://unsplash.it/300.webp?random=9" alt="image"></a>
+                </div>
+        </section>
+        <section class="middle">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/800.webp?random=1&grayscale" alt="random">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/800.webp?random=2&grayscale" alt="random">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/800.webp?random=3&grayscale" alt="random">
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <!-- <div class="swiper-pagination"></div> -->
+            
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            
+              <!-- If we need scrollbar -->
+              <!-- <div class="swiper-scrollbar"></div> -->
+            </div>            
+        </section>
+        <section class="bottom">
+            <div>
+                <img class="slice" src="https://source.unsplash.com/1600x900.webp?space,planets" alt="">
+                <script>
+                    document.querySelector('.slice').addEventListener('mousemove', function(e) {
+                    // get mouse position
+                    let x = e.clientX / window.innerWidth;
+                    let y = e.clientY / window.innerHeight;
+                    // change image src
+                    setTimeout(function() {
+                        document.querySelector('.slice').src =  'https://source.unsplash.com/1600x900/?.webp&space' + x
+                    }, 500);
+
+                    setTimeout(function() {
+                        document.querySelector('.slice').src =  'https://source.unsplash.com/1600x900/?.webp&rocket' + y
+                    }, 500);
+                    });
+                </script>
+            </div>
+        </section> 
+        <!-- add smooth scroll to top      -->
+        <div>
+            <span class="scroll-btn">&#9709;</span>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="img/ssstar.svg" alt="logo" width="80px">
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        <script defer src="js/main.js"></script>
+        <script src="node_modules/scrolly-video/dist/scrolly-video.js"></script>
+        <script type="text/javascript">
+                new ScrollyVideo({
+                    scrollyVideoContainer: "scrolly-video",
+                    transitionSpeed: 1,
+                    // src: "https://scrollyvideo.js.org/goldengate.mp4"
+                    src: "video/pexels-rodnae-productions-8475052-1080x1920-30fps-min.mp4"
+                });
+        </script>
+        <script src="node_modules/glightbox/dist/js/glightbox.min.js"></script>
+        <script type="text/javascript">
+            const lightbox = GLightbox({
+                selector: ".glightbox",
+                zoomable: true,
+                touchNavigation: true,
+                loop: true,
+                autoplayVideos: true,
+            });
+        </script>
+    </footer>
+</body>
+</htm>
