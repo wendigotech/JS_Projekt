@@ -337,7 +337,16 @@ label.hamburger.open .line:nth-child(1) {
         background-blend-mode: normal;
         background-color: #000;
         filter: grayscale(80%);
-  }
+
+        /* mask-image: linear-gradient(to bottom, #000, #000),
+        linear-gradient(to bottom, #000, #000),
+        linear-gradient(to bottom, #000, #000),
+        linear-gradient(to bottom, #000, #000),
+        linear-gradient(to bottom, #000, #000);
+        mask-size: 18% 70%;
+        mask-position: 0 100%, 25% 25%, 50% 50%, 75% 0, 100% 50%;
+        mask-repeat: no-repeat; */
+    }
 
   img.slice {
     max-width: 90vw;
